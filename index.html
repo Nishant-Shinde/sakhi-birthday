@@ -1,0 +1,85 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Day for My Sakhi</title>
+    
+    <!-- Google Fonts for an elegant look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- The Curtain Raiser screen -->
+    <div id="curtain">
+        <div class="curtain-content">
+            <h2>For my dearest Sakhi...</h2>
+            <button id="begin-button">Begin the Celebration</button>
+        </div>
+    </div>
+
+    <!-- The main content of the website, hidden initially -->
+    <main id="main-content">
+        <header>
+            <h1>Happy Birthday!</h1>
+            <p>Welcome to your special day.</p>
+        </header>
+        
+        <div class="hero-image-container">
+            <img src="https://placehold.co/600x400/6a5acd/ffffff?text=Your+Favorite+Photo" alt="A beautiful photo of Sakhi" onerror="this.onerror=null;this.src='https://placehold.co/600x400/6a5acd/ffffff?text=Your+Favorite+Photo';">
+        </div>
+
+        <!-- Section for the Constellation of Memories -->
+        <section id="constellation-section">
+            <h2>A Constellation of Our Memories</h2>
+            <p class="subtitle">Click on a star to reveal a memory.</p>
+            <div id="constellation-sky">
+                <!-- Memory stars will be dynamically added here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Letter Section -->
+        <section id="letter-section">
+            <h2>A Letter to My Sakhi</h2>
+            <div class="letter-content">
+                <p>My Dearest Sakhi,</p>
+                <p>On your special day, I wanted to try and put into words just how much our friendship means to me. From the moment we met, I knew I had found someone truly special. You bring so much light, laughter, and wisdom into my life, and for that, I am eternally grateful.</p>
+                <p>Remember all our adventures, the late-night talks, the shared dreams, and even the moments of comfortable silence. Each one is a treasure. Thank you for being my confidant, my cheerleader, and my partner-in-crime.</p>
+                <p>I wish you a year filled with immense joy, boundless love, and all the success you deserve. May you continue to shine as brightly as you always have. I look forward to all the memories we have yet to create.</p>
+                <p class="signature">With all my love and best wishes,<br>Your Sakha</p>
+            </div>
+        </section>
+
+        <!-- Reason Generator Section -->
+        <section id="reason-generator-section">
+            <h2>And a few more reasons why you're the best...</h2>
+            <div id="reason-display">
+                <p>Click the button for a reminder!</p>
+            </div>
+            <button id="reason-button">Tell Me!</button>
+        </section>
+    </main>
+
+    <!-- Modal for displaying a single memory -->
+    <div id="memory-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-title"></h3>
+            <img id="modal-image" src="" alt="Memory Photo">
+            <p id="modal-story"></p>
+        </div>
+    </div>
+
+    <!-- Audio element for background music -->
+    <audio id="background-music" loop>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

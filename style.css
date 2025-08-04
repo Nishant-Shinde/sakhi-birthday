@@ -1,0 +1,312 @@
+/* style.css */
+
+/* Google Font Variables */
+:root {
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --primary-color: #6a5acd; /* Royal Purple */
+    --secondary-color: #ff69b4; /* Hot Pink for accents */
+    --background-color: #fffaf0; /* Floral White */
+    --text-color: #333;
+    --sky-color-start: #1b2735;
+    --sky-color-end: #090a0f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* --- Curtain Styles --- */
+#curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s;
+}
+
+#curtain.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.curtain-content h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+#begin-button {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    background-color: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#begin-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 20px var(--secondary-color);
+}
+
+/* --- Main Content Styles --- */
+#main-content {
+    opacity: 0;
+    padding: 2rem;
+    transition: opacity 1.5s ease-in-out 1s;
+}
+
+#main-content.visible {
+    opacity: 1;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image-container img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 5px solid white;
+}
+
+/* --- Constellation Styles --- */
+#constellation-section {
+    margin-top: 4rem;
+}
+
+#constellation-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #777;
+}
+
+#constellation-sky {
+    position: relative;
+    height: 500px;
+    background: radial-gradient(ellipse at bottom, var(--sky-color-start) 0%, var(--sky-color-end) 100%);
+    border-radius: 15px;
+    margin: 0 auto;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white, 0 0 20px white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+.star:hover {
+    transform: scale(1.5);
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* --- Modal Styles --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.5s;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: black;
+}
+
+#modal-title {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#modal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+#modal-story {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* --- Letter Section Styles --- */
+#letter-section {
+    margin-top: 4rem;
+    padding: 3rem;
+    background-color: #ffffff;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+#letter-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.letter-content p {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.letter-content .signature {
+    text-align: right;
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+
+/* --- Reason Generator Styles --- */
+#reason-generator-section {
+    margin-top: 4rem;
+    padding: 3rem;
+    background-color: var(--primary-color);
+    color: white;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#reason-generator-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#reason-display {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+#reason-display p {
+    font-size: 1.5rem;
+    font-style: italic;
+    transition: opacity 0.5s ease;
+}
+
+#reason-button {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#reason-button:hover {
+    background-color: white;
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
