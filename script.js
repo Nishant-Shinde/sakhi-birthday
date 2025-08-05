@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- CONSTELLATION & MODAL LOGIC ---
     const memories = [
-        { title: "Our First Coffee", story: "I still remember how we talked for hours and it felt like only minutes had passed. This was the beginning of everything.", image: "https://placehold.co/400x300/e8a4b8/ffffff?text=Memory+1" },
-        { title: "That Rainy Day", story: "We got stuck in the rain without an umbrella and just laughed it off. It's one of my favorite simple memories with you.", image: "https://placehold.co/400x300/a4e8d5/ffffff?text=Memory+2" },
-        { title: "The Goa Trip", story: "Watching the sunset from the beach, knowing I had a friend like you by my side. Unforgettable.", image: "https://placehold.co/400x300/e8d5a4/ffffff?text=Memory+3" },
-        { title: "Your Last Birthday", story: "Seeing you so happy on your last birthday was the best gift. Can't wait to celebrate many more!", image: "https://placehold.co/400x300/a4a4e8/ffffff?text=Memory+4" },
-        { title: "Late Night Talks", story: "All those deep conversations and silly jokes shared under the stars. They mean the world to me.", image: "https://placehold.co/400x300/d5a4e8/ffffff?text=Memory+5" }
+        { title: "Our First Connection", story: " October 5th, 5:39 PM It was then, in the quiet glow of early evening, that our voices met for the very first time. A simple call—about APPAR and DEB ID for Amity— but, in that conversation, something gentle sparked. Two strangers, sharing words as friends, laying the first stones on a path that might become a beautiful story of warmth, understanding, and trust.", image: "../Images/Memory_1.png" },
+        { title: "Our First Day Out", story: "November 28th, 12:30 PM We met as friends on a bright afternoon, ready for a simple adventure together. Hours passed with easy conversation and laughter, turning ordinary moments into memories. As the sun set, we found ourselves sharing soulful pav bhaji— the perfect ending to a day well spent in good company", image: "../Images/Memory_2.png" },
+        { title: "Exchange Of Gifts", story: "An Unforgetable & A Beautiful Ganpati Bappa Drawing & A Special Letter Just before my Delhi Trip.", image: "../Images/Memory_3.jpeg" },
+        { title: "One of the funny memory", story: "Guessing you house address, lol it was fun activity!", image: "../Images/Memory_4.jpeg" },
+        { title: "Late Night Talks", story: "All those late-night talks,the deep conversations and the silly jokes— every moment we've shared means a lot to me. It’s these simple things, the laughter and understanding, that make our friendship truly special.", image: "../Images/Memory_5.jpeg" }
     ];
 
     const sky = document.getElementById('constellation-sky');
@@ -68,14 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // IMPORTANT: Customize this array with your own reasons!
     const sakhiReasons = [
         "...because you understand my silence.",
-        "...because you make the best chai.",
-        "...because of our 3 AM life talks.",
-        "...because you're my biggest cheerleader.",
-        "...because you can make me laugh even on a bad day.",
+        "...because you are good listner.",
+        "...because of our non sense talks.",
+        "...because you're my Sakhi.",
+        "...because you make efforts .",
         "...because you share the best memes.",
         "...because you give the most honest advice.",
-        "...because you're not just a friend, you're family."
-    ];
+        "…because our random talks can turn any day around..",
+        ];
 
     const reasonButton = document.getElementById('reason-button');
     const reasonDisplay = document.getElementById('reason-display').querySelector('p');
